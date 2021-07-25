@@ -1,0 +1,15 @@
+version: '3'
+services: 
+  librespot:
+    #image: mmmaxwwwell/librespot
+    build: ./
+    container_name: librespot
+    ports:
+      - 5353:5353
+      - 5353:5353/udp
+    env_file:
+      - ./settings/common.env
+    networks:
+      - librespot
+networks:
+  librespot:
