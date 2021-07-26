@@ -12,13 +12,13 @@ RUN rm -rf /etc/ssl /var/cache/apk/* /lib/apk/db/* /root/.cargo
 
 # CMD librespot -n "$SPEAKER_NAME" --initial-volume $INIT_VOL --device /data/fifo --zeroconf-port $ZEROCONF_PORT "$LIBRESPOT_ARGS"
 CMD librespot \
-  --name "librespot-docker" \
-  --bitrate 160 \
+  --name "$SPEAKER_NAME" \
+  --bitrate $BITRATE \
   --volume-ctrl linear \
-  --initial-volume=100 \
+  --initial-volume=$INIT_VOL \
   --backend pipe \
   --device /data/fifo \
-  --zeroconf-port 5454 \
+  --zeroconf-port $ZEROCONF_PORT \
   --cache /var/cache/librespot \
   --enable-volume-normalisation \
   --autoplay

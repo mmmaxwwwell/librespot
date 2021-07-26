@@ -4,14 +4,8 @@ services:
     #image: mmmaxwwwell/librespot
     build: ./
     container_name: librespot
-    ports:
-      - 5454:5454
-      - 5454:5454/udp
+    network_mode: "host"
     env_file:
       - ./settings.example/librespot.env
-    networks:
-      - librespot
     volumes:
       - ./appdata/librespot/cache:/var/cache/librespot
-networks:
-  librespot:
