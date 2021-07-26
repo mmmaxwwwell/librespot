@@ -5,8 +5,8 @@ services:
     build: ./
     container_name: librespot
     ports:
-      - 5353:5353
-      - 5353:5353/udp
+      - 5454:5454
+      - 5454:5454/udp
     env_file:
       - ./settings.example/librespot.env
     networks:
