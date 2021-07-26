@@ -1,0 +1,10 @@
+[Unit]
+Description=librespot
+
+[Service]
+ExecStart=/usr/bin/librespot --zeroconf-port 5353 --name "Kitchen Speaker" --bitrate 320 --backend pipe --device /var/cache/snapcast/snapfifo --cache /var/cache/librespot --enable-volume-normalisation --volume-ctrl linear --initial-volume=25 --autoplay
+Restart=always
+RestartSec=3 
+
+[Install]
+WantedBy=multi-user.target
