@@ -9,3 +9,4 @@ services:
       - ./settings.example/librespot.env
     volumes:
       - ./appdata/librespot/cache:/var/cache/librespot
+      - ./appdata/librespot/stream/pipe:/data
