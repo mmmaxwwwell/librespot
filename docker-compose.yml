@@ -11,5 +11,7 @@ services:
       - ./settings.example/librespot.env
     networks:
       - librespot
+    volumes:
+      - ./appdata/librespot/cache:/var/cache/librespot
 networks:
   librespot:
