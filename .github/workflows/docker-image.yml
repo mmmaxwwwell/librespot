@@ -32,8 +32,6 @@ jobs:
           platforms: linux/amd64
           push: true
           tags: mmmaxwwwell/librespot:latest
-
-          jobs:
   push-main-arm64-to-dockerhub:
     runs-on: ubuntu-latest
     steps:
