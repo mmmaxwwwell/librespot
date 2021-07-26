@@ -32,6 +32,3 @@ jobs:
           platforms: linux/amd64
           push: true
           tags: mmmaxwwwell/librespot:latest
-      -
-        - name: Build and publish multi platform Docker images
-        uses: dawidd6/action-docker-publish-changed@v3.0.1
