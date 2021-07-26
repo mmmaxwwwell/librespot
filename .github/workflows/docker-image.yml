@@ -29,6 +29,9 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: .
-          platforms: linux/arm64,linux/amd64
+          platforms: linux/amd64
           push: true
           tags: mmmaxwwwell/librespot:latest
+      -
+        - name: Build and publish multi platform Docker images
+        uses: dawidd6/action-docker-publish-changed@v3.0.1
