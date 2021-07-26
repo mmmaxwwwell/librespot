@@ -32,10 +32,3 @@ jobs:
           platforms: linux/amd64
           push: true
           tags: mmmaxwwwell/librespot:latest
-      - 
-        name: Update docker hub repo description
-        uses: peter-evans/dockerhub-description@v2
-        with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_PASSWORD }}
-          repository: mmmaxwwwell/librespot
