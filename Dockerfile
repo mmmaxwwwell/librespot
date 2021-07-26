@@ -1,6 +1,6 @@
 FROM alpine:edge
 
-RUN apk -U add cargo portaudio-dev protobuf-dev
+RUN apk -U add cargo portaudio-dev protobuf-dev llvm-libunwind 
 RUN cargo install librespot
 RUN mv /root/.cargo/bin/librespot /bin
 RUN mkdir -p /data
