@@ -10,7 +10,6 @@ RUN mkfifo /data/fifo
 RUN apk --purge del curl cargo portaudio-dev protobuf-dev
 RUN rm -rf /etc/ssl /var/cache/apk/* /lib/apk/db/* /root/.cargo
 
-# CMD librespot -n "$SPEAKER_NAME" --initial-volume $INIT_VOL --device /data/fifo --zeroconf-port $ZEROCONF_PORT "$LIBRESPOT_ARGS"
 CMD librespot \
   --name "$SPEAKER_NAME" \
   --bitrate $BITRATE \
