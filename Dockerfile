@@ -4,6 +4,7 @@ RUN apk -U add cargo portaudio-dev alsa-lib protobuf-dev llvm-libunwind libgcc
 RUN cargo install librespot
 RUN mv /root/.cargo/bin/librespot /bin
 RUN mkdir -p /data
+RUN rm -rf /data/fifo
 RUN mkfifo /data/fifo
 
 #cleanup
